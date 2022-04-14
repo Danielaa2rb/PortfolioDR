@@ -295,9 +295,6 @@ footer{
 .form{
     text-align: center;
     align-items: center;
-    @media (max-width: 754px){
-        justify-content: center;
-        width: 100%;
     }
     .lett{
         font-family: 'Poppins', sans-serif;
