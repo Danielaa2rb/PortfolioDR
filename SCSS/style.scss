@@ -72,6 +72,7 @@ body{
         transition: 0.3s;
         ul{
             li{
+                text-align: center;
                 list-style: none;
                 padding: 2rem 0;
                 a{
@@ -94,7 +95,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (max-width: 414px){
+    @media (max-width: 600px){
         padding: 2%;
     }
     .texts{
@@ -116,7 +117,7 @@ body{
             font-weight:normal;
             color: $bg-color1;
             font-size: 25px;
-            @media (max-width: 414px){
+            @media (max-width: 600px){
                 padding: 4%;
                 margin-top: 2rem;
             }
@@ -147,7 +148,7 @@ body{
         padding: 2%;
         margin-top: 2rem;
     }
-    @media (max-width: 414px){
+    @media (max-width: 600px){
         padding: 0;
         gap: 0;
         margin-top: 2rem;
@@ -160,11 +161,11 @@ body{
         box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
         border-radius: 20px;
         transition: .3s;
-        @media (max-width: 1000px){
+        @media (max-width: 900px){
             flex-direction: column;
             padding: 1rem;
         }
-        @media (max-width: 414px){
+        @media (max-width: 600px){
             padding: 2%;
             width: 90%;
             margin-top: 2rem;
@@ -176,7 +177,7 @@ body{
             padding: 3rem;
             margin: 0 auto;
             max-width: 25rem;
-            @media (max-width: 414px){
+            @media (max-width: 600px){
                 padding: 2%;
                 margin-top: 2rem;
             }
@@ -327,6 +328,7 @@ footer{
         transition: 0.3s;
         ul{
             li{
+                text-align: center;
                 list-style: none;
                 padding: 2rem 0;
                 .lih{   
@@ -351,7 +353,7 @@ footer{
     justify-content: space-around;
     padding: 3rem;
     align-items: center;
-    @media (max-width: 414px){
+    @media (max-width: 830px){
         flex-direction: column;
     }
     .box{
@@ -363,7 +365,7 @@ footer{
             font-size: 20px;
             padding: 0 2rem;
             margin-right: 4rem;
-            @media (max-width: 414px){
+            @media (max-width: 600px){
                 flex-direction: column;
                 padding: 0;
                 margin-right: 0;
@@ -381,12 +383,12 @@ footer{
         background-color: $bg-color1;
         font-family: 'Poppins', sans-serif;
         color: $tittle-color;
-        @media (max-width: 754px){
+        @media (max-width: 830px){
             justify-content: center;
             width: 100%;
             padding: 4rem 2rem;
         }
-        @media (max-width: 414px){
+        @media (max-width: 600px){
             flex-direction: column;
             padding: 4rem 1rem;
         }
@@ -413,12 +415,13 @@ footer{
 .form{
     text-align: center;
     align-items: center;
-    width: 60%;
+    width: 100%;
+    padding: 0 20%;
     margin: 0 auto;
-    @media (max-width: 414px){
+    @media (max-width: 600px){
         justify-content: center;
         width: 100%;
-        padding: 4rem 2rem;
+        padding: 2rem;
     }
     .lett{
         font-family: 'Poppins', sans-serif;
@@ -446,10 +449,11 @@ footer{
         font-family: 'Poppins', sans-serif;
         color: $bg-color1;
         font-weight: bold;
+        font-size: 15px;
         border-radius: 5rem;
         border: none;
-        width: 6rem;
-        height: 2rem;
+        width: 7rem;
+        height: 2.5rem;
         box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
         margin-bottom: 3rem;
     }
@@ -467,11 +471,15 @@ footer{
             width: 100%;
             align-items: center;
             margin-top: 1rem;
+            @media (max-width: 600px){
+                justify-content: center;
+                width: 100%;
+            }
             .fab{
                 color: $foot-color;
                 text-decoration: none;
                 padding: 0 1rem;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 margin-bottom: 2rem;
             }
         }
