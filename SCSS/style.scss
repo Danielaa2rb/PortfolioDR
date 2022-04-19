@@ -3,16 +3,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
 }
 /*Home*/
+body{
+    overflow-x: hidden;
+}
 .header1{
     background-color: $tittle-color;
     top: 0;
-    z-index: 1000;
+    z-index: 800;
     width: 100%;
     position: absolute;
     nav{
+        @media (max-width: 580px){
+            display: none;
+        }
         .menu1{
             width: auto;
             border-radius: 5px;
@@ -40,6 +45,44 @@
                 }
         }
     }
+    .burger{
+        z-index: 1000;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2rem;
+        color: #000000;
+        display: none;
+        @media (max-width: 580px){
+            display: block;
+        }
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $tittle-color;
+        z-index: 999;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: 0.3s;
+        ul{
+            li{
+                list-style: none;
+                padding: 2rem 0;
+                a{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .active{
+        transform: translateX(0);
+    }
 }
 .biography{
     background-color: $tittle-color;
@@ -51,6 +94,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 414px){
+        padding: 2%;
+    }
     .texts{
         .text1{
             margin-bottom: 1rem;
@@ -70,6 +116,10 @@
             font-weight:normal;
             color: $bg-color1;
             font-size: 25px;
+            @media (max-width: 414px){
+                padding: 4%;
+                margin-top: 2rem;
+            }
         }
     }
     .scroll{
@@ -97,6 +147,11 @@
         padding: 2%;
         margin-top: 2rem;
     }
+    @media (max-width: 414px){
+        padding: 0;
+        gap: 0;
+        margin-top: 2rem;
+    }
     .card{
         display: flex;
         align-items: center;
@@ -107,7 +162,12 @@
         transition: .3s;
         @media (max-width: 1000px){
             flex-direction: column;
-            padding: 4rem;
+            padding: 1rem;
+        }
+        @media (max-width: 414px){
+            padding: 2%;
+            width: 90%;
+            margin-top: 2rem;
         }
         &:hover{
             transform: scale(1.05);
@@ -116,6 +176,10 @@
             padding: 3rem;
             margin: 0 auto;
             max-width: 25rem;
+            @media (max-width: 414px){
+                padding: 2%;
+                margin-top: 2rem;
+            }
             .descrip{
                 font-family: 'Roboto Serif', sans-serif;
                 font-weight: lighter;
@@ -202,10 +266,13 @@ footer{
 .header2{
     background-color: $bg-color1;
     top: 0;
-    z-index: 1000;
+    z-index: 800;
     width: 100%;
     position: absolute;
     nav{
+        @media (max-width: 580px){
+            display: none;
+        }
         .menu2{
             width: auto;
             border-radius: 5px;
@@ -229,9 +296,53 @@ footer{
             color: $tittle-color;
             text-decoration: none;
                 &:hover{
-                color:#bb5454;
+                color:$foot-color;
                 }
         }
+    }
+    .burger{
+        z-index: 1000;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2rem;
+        color: #000000;
+        display: none;
+        @media (max-width: 580px){
+            display: block;
+        }
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $tittle-color;
+        z-index: 999;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: 0.3s;
+        ul{
+            li{
+                list-style: none;
+                padding: 2rem 0;
+                .lih{   
+                    font: $home-font;
+                    color: $bg-color1;
+                    text-decoration: none;
+                    font-size: 30px;
+                        &:hover{
+                        color:$foot-color;
+                        }
+                }
+            }
+        }
+    }
+    .active{
+        transform: translateX(0);
     }
 }
 .about{
@@ -240,20 +351,23 @@ footer{
     justify-content: space-around;
     padding: 3rem;
     align-items: center;
-    @media (max-width: 1000px){
+    @media (max-width: 414px){
         flex-direction: column;
-        width: 100%;
-        padding: auto 5rem;
     }
     .box{
-        max-width: 754px;
+        width: 100%;
         .texts2{
             background-color: $bg-color1;
             font-family: 'Roboto Serif', sans-serif;
             color:#000000;
             font-size: 20px;
-            text-align: justify;
-            padding: 2rem;
+            padding: 0 2rem;
+            margin-right: 4rem;
+            @media (max-width: 414px){
+                flex-direction: column;
+                padding: 0;
+                margin-right: 0;
+            }
             .text3{
                 background-color: $bg-color1;
                 font-family: 'Poppins', sans-serif;
@@ -262,10 +376,9 @@ footer{
             }
         }
     }
-    .list{
+    .list-container{
         text-align: left;
         background-color: $bg-color1;
-
         font-family: 'Poppins', sans-serif;
         color: $tittle-color;
         @media (max-width: 754px){
@@ -273,10 +386,15 @@ footer{
             width: 100%;
             padding: 4rem 2rem;
         }
+        @media (max-width: 414px){
+            flex-direction: column;
+            padding: 4rem 1rem;
+        }
         .list{
             padding: 1rem;
             font-family: 'Roboto Serif', sans-serif;
             color:#000000;
+            text-decoration: $tittle-color;
         }
     }
 
@@ -295,6 +413,13 @@ footer{
 .form{
     text-align: center;
     align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    @media (max-width: 414px){
+        justify-content: center;
+        width: 100%;
+        padding: 4rem 2rem;
+    }
     .lett{
         font-family: 'Poppins', sans-serif;
         color: rgb(0, 0, 0);
@@ -303,16 +428,15 @@ footer{
         margin-bottom: 3rem;
     }   
     input{
-        width: 30rem;
-        height: 2rem;
+        padding: 7px;
+        width: 100%;
         border-radius: 10px;
         border: $tittle-color 1px solid;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
     textarea{
-        width: 30rem;
-        height: 4rem;
+        width: 100%;
         border-radius: 10px;
         border-color: $tittle-color;
         margin-top: 1rem;

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Imagenes/favicon_io/favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../Imagenes/favicon_io/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../SCSS/style.css">
     <title>About me | Daniela Rocha</title>
     <meta name="description" content="Hi, my name is Daniela Rocha and I'm UX/UI Developer. Here you can to find a little about my work and me.">
@@ -17,8 +18,16 @@
         <nav>
             <ul class="menu2">
                 <li><a class="li2" href="../index.html">Home</a></li>
-                <li><a class="li2" href="aboutme.html">About</a></li>
-                <li><a class="li2" href="contact.html">Contact</a></li>
+                <li><a class="li2" href="./aboutme.html">About</a></li>
+                <li><a class="li2" href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="burger fas fa-ellipsis-h" id="burger"></div>
+        <nav class="nav" id="lat-nav">
+            <ul>
+                <li><a class="lih" href="../index.html">Home</a></li>
+                <li><a class="lih" href="./aboutme.html">About</a></li>
+                <li><a class="lih" href="./contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +48,7 @@
                     </p>
                 </div>  
             </div>
-            <div class= "list">
+            <div class= "list-container">
                 <h3 class="what">
                     What I like
                 </h3>
@@ -59,5 +68,9 @@
     <footer>
         <span>&copy; 2021 All rights reserved by Daniela Rocha</span>
     </footer>
+
+    <script src="../app.js"></script>
+
+    
 </body>
 </html>
